@@ -1,0 +1,22 @@
+.todo-item{
+    border: 2px solid rgb(42, 122, 74);
+    /* width: 30%; */
+    background-color: aquamarine;
+}
+.item-descr{
+    font-size: 25px;
+}
+
+.item-btn{
+    font-size: 20px;
+    margin: 10px;
+    background-color: cornflowerblue;
+    padding:5px 10px;
+    border-radius: 20px;
+}
+.red{
+    background-color: rgb(243, 169, 169);
+}
+.green{
+    background-color: rgb(122, 184, 122);
+}

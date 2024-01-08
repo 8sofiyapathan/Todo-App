@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { MyContext } from './MyContext';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import TodoApp from './components/TodoApp';
 
 function App() {
+
+  let [todoArr, setTodoArr] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className='app-container'>
+   <Navbar/>
+   <MyContext.Provider value={{todoArr,setTodoArr}}>
+
+   <TodoApp/>
+
+   </MyContext.Provider>
+   <Footer/>
+   </div>
   );
 }
 
